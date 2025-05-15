@@ -8,7 +8,7 @@ import { ButtonComponent } from '@predigle/micro/component-ui';
   declarations: [Manage_hierarchyComponent],
   imports: [
     CommonModule,
-   ButtonComponent
+   ButtonComponent,
   ],
   exports: [Manage_hierarchyComponent]
 })
