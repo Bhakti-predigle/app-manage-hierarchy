@@ -1,4 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@predigle/micro/component-ui/styles/utilities/utilities';
+@import '@predigle/micro/component-ui/styles/themes/dark-theme';
+@import '@predigle/micro/component-ui/styles/themes/light-theme';
+@import '@predigle/micro/component-ui/styles/base/base';
+@import '@predigle/micro/component-ui/styles/abstracts/mixins';
+@import '@predigle/micro/component-ui/styles/abstracts/variables';
+@import '@predigle/micro/component-ui/styles/base/typography';
 
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}

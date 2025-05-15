@@ -1,0 +1,64 @@
+<div>
+  <!-- <app-top-nav-bar></app-top-nav-bar> -->
+</div>
+<div class="container1">
+  <div class="container-nav">Navigation bar</div>
+  <div class="container-content">
+
+    <div class="container-breadcrumb">
+      <div class="container-breadcrumb1">BreadCrumb</div>
+      <div>
+        <div class="tab-button-group">
+          <button mat-button
+            [ngStyle]="{ 'background-color': selectedTab === 'manageNode' ? '#FFFFFF' : '#F0F0F0', 'color': selectedTab === 'manageNode' ? '#334053' : '#b0b0b0' }"
+            (click)="selectTab('manageNode')">
+            Manage Node
+          </button>
+
+          <button mat-button
+            [ngStyle]="{ 'background-color': selectedTab === 'auditLogs' ? '#FFFFFF' : '#F0F0F0', 'color': selectedTab === 'auditLogs' ? '#334053' : '#b0b0b0' }"
+            (click)="selectTab('auditLogs')">
+            Audit Logs
+          </button>
+        </div>
+
+
+        <div class="tab-content">
+
+          <ng-container *ngIf="selectedTab === 'manageNode'">
+
+            <div class="container-node_header">
+
+              <div class="container-node_header-div">
+                <div class="container-node_header1">Manage Nodes</div>
+                <div class="container-node_header2">Manage node details—all in one place</div>
+              </div>
+
+              <div style="display: flex; gap: 0.5rem;">
+                <lib-button [variant]="'destructive'" [size]="'medium'" [type]="'secondary'" [label]="'Delete'">
+                </lib-button>
+                <lib-button [variant]="'contained'" [size]="'medium'" [type]="'primary'" [label]="'save'">
+                </lib-button>
+
+              </div>
+            </div>
+
+
+
+            <div class="container-node_details"></div>
+
+          </ng-container>
+
+          <ng-container *ngIf="selectedTab === 'auditLogs'">
+            <p style="padding: 20px;">Logs Content</p>
+          </ng-container>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- <div class="container-node-nav"></div> -->
+  </div>
+</div>
