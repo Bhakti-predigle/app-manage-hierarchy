@@ -1,12 +1,17 @@
-<div>
-  <!-- <app-top-nav-bar></app-top-nav-bar> -->
-</div>
-<div class="container1">
-  <div class="container-nav">Navigation bar</div>
-  <div class="container-content">
+<div class="container">
+  <div style="border-bottom: 3px solid #E4E7EC;height: 3rem;box-sizing: border-box;padding: 0.5rem;">
+    <app-top-nav-bar></app-top-nav-bar>
+  </div>
+  <div class="container1">
+    <div class="container-nav">Navigation bar</div>
+    <div class="container-content">
 
-    <div class="container-breadcrumb">
-      <div class="container-breadcrumb1">BreadCrumb</div>
+      <div class="container-breadcrumb">
+        <div class="container-breadcrumb1">BreadCrumb</div>
+        <lib-button [variant]="'contained'" [size]="'medium'" [type]="'primary'" [label]="'Create Connection'">
+          <mat-icon iconLeft>add</mat-icon>
+        </lib-button>
+      </div>
       <div>
         <div class="tab-button-group">
           <button mat-button
@@ -37,15 +42,14 @@
               <div style="display: flex; gap: 0.5rem;">
                 <lib-button [variant]="'destructive'" [size]="'medium'" [type]="'secondary'" [label]="'Delete'">
                 </lib-button>
-                <lib-button [variant]="'contained'" [size]="'medium'" [type]="'primary'" [label]="'save'">
+                <lib-button [variant]="'contained'" [size]="'medium'" [type]="'primary'" [label]="'Save'">
                 </lib-button>
 
               </div>
             </div>
 
-
-
-            <div class="container-node_details"></div>
+            <div class="container-node_details">
+            </div>
 
           </ng-container>
 
