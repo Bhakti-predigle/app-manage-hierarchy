@@ -1,6 +1,7 @@
 <div class="container">
-  <div style="border-bottom: 3px solid #E4E7EC;height: 3rem;box-sizing: border-box;padding: 0.5rem;">
-    <app-top-nav-bar></app-top-nav-bar>
+  <div
+    style="height: 3rem;box-sizing: border-box;padding: 0.5rem; border-bottom: 1px solid var(--Colors-Border-border-primary, #D0D5DD);">
+    <app-header></app-header>
   </div>
   <div class="container1">
     <div class="container-nav">Navigation bar</div>
@@ -49,6 +50,28 @@
             </div>
 
             <div class="container-node_details">
+              <form [formGroup]="form" class="custom-form">
+                <div class="form-group">
+                  <label for="nodeName">Node Name <span class="required">*</span></label>
+                  <input id="nodeName" type="text" formControlName="nodeName" class="mat-input-element custom-input" />
+                </div>
+
+                <div class="form-group">
+                  <label for="description">Description (Optional)</label>
+                  <textarea id="description" formControlName="description" rows="4"
+                    class="mat-input-element custom-input"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="parentType">Parent Type <span class="required">*</span></label>
+                  <mat-select id="parentType" formControlName="parentType" class="custom-select">
+                    <mat-option value="Node">Node</mat-option>
+                    <mat-option value="Other">Other</mat-option>
+                  </mat-select>
+                </div>
+              </form>
+
+
             </div>
 
           </ng-container>
@@ -62,7 +85,5 @@
 
       </div>
     </div>
-
-    <!-- <div class="container-node-nav"></div> -->
   </div>
 </div>
