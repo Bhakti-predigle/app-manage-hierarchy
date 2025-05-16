@@ -1,0 +1,36 @@
+<!-- <h1>Predigle</h1> -->
+<lib-top-navbar>
+
+  <img navLogo src="https://storybook.predigle.com/assets/logo.svg" style="width: 5rem; height: 1.0936rem;"
+    alt="Logo" />
+
+  <ng-container ProfileSection>
+    <img src="https://storybook.predigle.com/assets/profile-picture.png" style="width: 1.6rem; height: 1.6rem;"
+      alt="profile-picture" />
+    <lib-nav-icon iconUrl="https://storybook.predigle.com/assets/arrow-down-light.svg" iconWidth="1.2rem"
+      iconHeight="1.2rem" />
+  </ng-container>
+
+  <lib-profile-card ProfileCard theme="light">
+    <img Avatar src="https://storybook.predigle.com/assets/avatar.png" style="width: 1.8rem; height: 1.8rem;"
+      alt="User Avatar" />
+    <ng-container Details>
+      <lib-typography size="medium" weight="bold" color="primary">
+        Olivia Rhye
+      </lib-typography>
+      <lib-typography size="medium" weight="light" color="secondary">
+        Olivia.rhye&#64;predigle.com
+      </lib-typography>
+    </ng-container>
+
+    <ng-container MenuItems>
+
+      <div menu-item logout>
+        <img src="https://storybook.predigle.com/assets/logout-light.svg" style="height: 1.2rem;width: 1.2rem;" />
+        <span>Logout</span>
+      </div>
+    </ng-container>
+  </lib-profile-card>
+
+  <lib-tab NavSubTabs [options]="subTabOptions" />
+</lib-top-navbar>

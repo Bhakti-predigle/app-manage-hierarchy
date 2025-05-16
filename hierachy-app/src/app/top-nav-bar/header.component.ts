@@ -1,19 +1,70 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TopNavbarComponent,SelectDropdownComponent,BadgeComponent,ProductSwitcherComponent,ProfileCardComponent,TabComponent,NavIconComponent,InputBoxComponent,TypographyComponent,GenerateButtonComponent,
+} from '@predigle/micro/component-ui';
 
 @Component({
   standalone: true,
-  selector: 'app-top-nav-bar',
-  templateUrl: './top-nav-bar.component.html',
-  styleUrls: ['./top-nav-bar.component.scss'],
-  imports: [CommonModule]
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
+  imports: [CommonModule,
+    TopNavbarComponent,
+    SelectDropdownComponent,
+    BadgeComponent,
+    ProductSwitcherComponent,
+    ProfileCardComponent,
+    TabComponent,
+    NavIconComponent,
+    InputBoxComponent,
+    TypographyComponent,
+    GenerateButtonComponent, ]
 })
-export class TopNavBarComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
   }
+  tabOptions = [
+    { label: 'My Details', route: '/home' },
+    { label: 'About', route: '/about' },
+    { label: 'Contact', route: '/contact' },
+    { label: 'Option 3', route: '/option-3' },
+  ];
+
+  subTabOptions = [
+    { label: 'Sub Details', route: '/contact' },
+    { label: 'Sub Option 1', route: '/option-1' },
+    { label: 'Sub Option 2', route: '/about' },
+    { label: 'Sub Option 3', route: '/home' },
+  ];
+
+  workspaces = [
+        {
+          id: '1',
+          primaryContent: 'Workspace 1',
+          secondaryContent: 'AL',
+          assetSrc: 'profile-picture.png',
+        },
+        {
+          id: '2',
+          primaryContent: 'Workspace 2',
+          secondaryContent: 'AK',
+        },
+        {
+          id: '3',
+          primaryContent: 'Workspace 3',
+          secondaryContent: 'AM',
+          assetSrc: 'profile-picture.png',
+        },
+        {
+          id: '4',
+          primaryContent: 'Workspace 4',
+          secondaryContent: 'AZ',
+          assetSrc: 'profile-picture.png',
+        },
+      ];
 
 }
 
