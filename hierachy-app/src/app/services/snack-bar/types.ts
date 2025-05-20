@@ -1,0 +1,1 @@
+export type SnackBarSeverity = 'success' | 'error' | 'info';

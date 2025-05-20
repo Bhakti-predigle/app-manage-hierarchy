@@ -1,1 +1,14 @@
-<router-outlet />
+<div *ngIf="!isTenantsLoaded" class="loader-container">
+    <div class="loader"></div>
+</div>
+<div *ngIf="isTenantsLoaded">
+    <app-header *ngIf="showHeader" [tenants]="tenants" [selectedTenant]="selectedTenant"
+        (tenantChange)="onTenantChange($event)" [simplifiedData]="simplifiedData" [isAdmin]="isAdmin"></app-header>
+    <div class="router-content" *ngIf="isTenantsLoaded">
+        <!-- Loader displayed during route transitions or async operations -->
+        <div *ngIf="isWait | async" class="loader-container">
+            <div class="loader"></div>
+        </div>
+        <!-- Main Router Outlet -->
+        <router-outlet *ngIf="!(isWait | async)"></router-outlet>
+    </div>
