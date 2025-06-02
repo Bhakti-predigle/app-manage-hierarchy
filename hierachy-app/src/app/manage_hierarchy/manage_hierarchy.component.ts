@@ -7,7 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FormGroup, FormsModule, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
-
+import { BreadcrumbComponent, SelectDropdownComponent,InputsComponent,SelectOption, TextAreaComponent} from "@predigle/micro/component-ui";
 
 
 @Component({
@@ -17,7 +17,7 @@ import { FormGroup, FormsModule, ReactiveFormsModule, FormBuilder, Validators } 
   styleUrls: ['./manage_hierarchy.component.scss'],
   imports : [CommonModule,ButtonComponent,
     HeaderComponent,
-    MatIconModule,MatFormFieldModule,MatInputModule,MatSelectModule,FormsModule,ReactiveFormsModule],
+    MatIconModule,MatFormFieldModule,MatInputModule,MatSelectModule,FormsModule,ReactiveFormsModule,BreadcrumbComponent,SelectDropdownComponent,InputsComponent,TextAreaComponent ],
 })
 export class Manage_hierarchyComponent implements OnInit {
   selectedTab: string = 'manageNode';
@@ -27,7 +27,7 @@ export class Manage_hierarchyComponent implements OnInit {
     this.form = this.fb.group({
       nodeName: ['', Validators.required],
       description: [''],
-      parentType: ['Node', Validators.required]
+      parent: ['Node', Validators.required]
     });
   }
 
@@ -40,4 +40,9 @@ export class Manage_hierarchyComponent implements OnInit {
     this.selectedTab = tab;
   }
 
+  websites: SelectOption[] = [
+  { id: '1', primaryContent: 'Google' },
+  { id: '2', primaryContent: 'Youtube' },
+  { id: '3', primaryContent: 'Spotify' }
+];
 }
