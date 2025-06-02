@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
     "@angular/ssr": "^17.3.17",
-    "@predigle/micro": "^0.0.6",
+    "@predigle/micro": "^0.0.9",
     "html2canvas": "^1.4.1",
     "keycloak-angular": "^15.3.0",
     "keycloak-js": "^25.0.6",
